@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>iColabora</title>
+        <link rel="stylesheet" href="./assets/app.css">
+        <link rel="stylesheet" href="./libs/bootstrap-5.0.1-dist/css/bootstrap.css">
+    </head>
+    <body>
+        <main class="container mt-5">
+
+            <div class="row user-preview d-none">
+                <div class="col col-3 mx-auto shadow-sm p-3 mb-5 bg-white rounded">
+                    <img
+                        src="https://via.placeholder.com/150/"
+                        class="d-block mx-auto preview--user-avatar-info mb-3"
+                        width="150"
+                        height="150"
+                        alt="foto do usuário"
+                    >
+                    <h6 class="preview--user-name-info"></h6>
+                    <p class="m-0 preview--user-bio-info"></p>
+                    <p class="preview--user-location-info"></p>
+
+                    <div class="text-end">
+                        <button class="btn btn-sm btn-secondary preview--user-cancel-btn">cancelar</button>
+                        <button class="btn btn-sm btn-primary preview--user-save-btn">salvar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="user-edit d-none">
+                <div class="row">
+                    <form action="#" class="edit col col-3 mx-auto shadow-sm p-3 mb-5 bg-white rounded">
+                        <img
+                            width="150"
+                            height="150"
+                            class="d-block edit--user-avatar mb-2"
+                            src="https://via.placeholder.com/150" alt="user"
+                        >
+                        <input type="text" name="edit--user-name" class="form-control mb-1">
+                        <input type="text" name="edit--user-bio" class="form-control mb-1">
+                        <input type="text" name="edit--user-location" class="form-control mb-2">
+
+                        <div class="text-end">
+                            <button
+                                type="button"
+                                class="btn btn-danger btn-sm btn-delete-user"
+                                data-userid="#"
+                            >deletar</button>
+
+                            <button
+                                type="button"
+                                class="btn btn-primary btn-sm btn-update-user"
+                                data-userid="#"
+                            >salvar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row user-search">
+                <form class="col col-6 mx-auto search">
+                    <input type="text" name="search_user_name" required class="form-control" placeholder="Busque por um usuário do github">
+                    <div class="d-grid mt-2">
+                        <button class="btn btn-primary" type="button">BUSCAR</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col col-6 mx-auto">
+                    <table class="table users-table">
+                        <thead>
+                            <tr class="bg-white">
+                                <th class="border-0" scope="col">Nome</th>
+                                <th class="border-0" scope="col">Bio</th>
+                                <th class="border-0" scope="col">Localidade</th>
+                                <th class="border-0" scope="col">#</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+
+        <script src="./libs/jQuery/jQuery.js"></script>
+        <script src="./assets/controller.js" type="module"></script>
+    </body>
+</html>
